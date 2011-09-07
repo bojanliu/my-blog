@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml' lang='en'>
+<head>
+<meta http-equiv='content-type' content='text/html';charset='UTF-8'>
+<title>PYnotes</title>
+<link href="/static/style.css" rel="stylesheet" type="text/css" media="screen"/>
+</head>
+
+<body>
+<div id='wrapper'>
+	<div id='header'>
+			<div id='logo'><a href='/'><img src='/static/logo.gif'/></a></div>
+			<div id='site-description'>
+				<span>Life is short, So use python!</span>
+			</div>
+			<div id='bgimage'><img src='/static/bgimage.jpg' width='940' height='198'></div>
+			<div id='access'>
+				<div class='menu'>
+					<ul>
+						<li><a href='/'>首页</a></li>
+						<li><a href='/about/'>关于</a></li>
+						<li><a href='/contact/'>联系</a></li>
+					</ul>
+				</div>
+			</div>
+	</div>
+
+	<div id='main'>
+		<div id='container'>
+			<div id='content'>
+			{%block content%}
+			{%endblock%}
+			</div>
+		</div>
+		<div id='widget-area'>
+			{%include 'sidebar.html'%}				
+		</div>
+
+	</div>
+
+	<div id='footer'>
+		<div id='colophon'>
+			<div id="site-info">
+				<a href="/" title="PYnotes" rel="home">PYnotes</a>
+				<span> Copyright &copy 2011</span>
+			</div>
+			<div id='site-generator'>			
+				<img src='/static/poweredbydjango.jpg' width='80' height=15>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-23803260-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'http://www.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>
+
+

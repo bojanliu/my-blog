@@ -1,0 +1,5 @@
+<ul>
+{%for tag in tags%}
+	<a href='{%url posts_by_tag tag.id%}' title='{{tag.post_set.count}} post{{tag.post_set.count|pluralize}}'>{{tag.name}}</a>
+{%endfor%}
+</ul>

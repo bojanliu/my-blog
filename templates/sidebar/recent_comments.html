@@ -1,0 +1,18 @@
+{%load gravatar%}
+<ul class='recent-comments'>
+{%for comment in recent_comments%}
+<li>
+<div>
+	<span class='rc-img'>
+		<img src='{%gravatar_url comment.user_email%}'>
+	</span class='rc-body'>
+	<span>{{comment.user_name}} in 
+	<a href='{%url post_by_id comment.object_pk%}#{{comment.user_name}}'>
+		{{comment.content_object}}
+	</a> said: {{comment.comment}}
+	</span>
+	<div class='rc-line'></div>
+</div>
+</li>
+{%endfor%}
+</ul>

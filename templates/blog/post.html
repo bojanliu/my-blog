@@ -1,0 +1,55 @@
+﻿{%load comments%}
+{%get_comment_count for post as comment_count%}
+<div>
+	<h2 class='entry-title'>
+		<a href='{%url post_by_id post.id%}'>{{post.title}}</a>
+	</h2>
+	<div class='entry-meta'>
+		<span class='riqi'>      日期：{{post.pub_date|date:'F j, Y'}}           </span>       
+		<span class='zuozhe'>      作者：{{post.author}}           </span>        
+		<span class='pinglun'>      <a href='{%url post_by_id post.id%}#comments'>评论({{comment_count}})</a>         </span>   	
+		<span class='category'>分类：{%for category in post.categories.all%}<a href='{%url posts_by_category category.id%}'>{{category}}</a>{%endfor%}</span>
+	</div>
+	<div class='entry-content'>{{post.body|safe}}</div>	
+	<div class='entry-tags'>
+		标签：{%for tag in post.tags.all%}
+		<a href='{%url posts_by_tag tag.id%}'>{{tag}}</a>
+		{%endfor%}
+	</div>
+	<div id='bottom-info'>
+		<div id='befor-post'>
+			{%if post.is_bigest_id%}
+			最早一篇
+			{%else%}
+			<a href='{%url post_by_id post.id|add:'1'%}'>上一篇：{{post.befor_post_title}}</a>
+			{%endif%}
+		</div>
+		<div id='after-post'>
+			{%ifequal post.id 1%}
+			最后一篇
+			{%else%}
+			<a href='{%url post_by_id post.id|add:'-1'%}'>下一篇：{{post.after_post_title}}</a>
+			{%endifequal%}
+		</div>
+		<div class='clear'></div>
+	</div>
+	<!-- AddThis Button BEGIN -->
+	<div class="addthis_toolbox addthis_default_style " >
+	<a class="addthis_button_preferred_1"></a>
+	<a class="addthis_button_preferred_2"></a>
+	<a class="addthis_button_preferred_3"></a>
+	<a class="addthis_button_preferred_4"></a>
+	<a class="addthis_button_preferred_5"></a>
+	<a class="addthis_button_preferred_6"></a>
+	<a class="addthis_button_preferred_7"></a>
+	<a class="addthis_button_preferred_8"></a>
+	<a class="addthis_button_preferred_9"></a>
+	<a class="addthis_button_preferred_10"></a>
+	<a class="addthis_button_compact"></a>
+	<a class="addthis_counter addthis_bubble_style"></a>
+	</div>
+	<script type="text/javascript">var addthis_config = {"data_track_clickback":true};</script>
+	<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4dfdfee9392668ff"></script>
+	<!-- AddThis Button END -->
+	<div class='Separator-line'></div>
+</div>

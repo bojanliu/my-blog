@@ -1,0 +1,5 @@
+<ul>
+{%for archive in archives%}
+<li><a href='{%url posts_by_month archive.year,archive.month%}'>{{archive|date:'M Y'}}</a></li>
+{%endfor%}
+</ul>

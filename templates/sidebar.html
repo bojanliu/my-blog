@@ -1,0 +1,77 @@
+﻿{%load sidebar%}
+<ul>
+	<li>
+		<h3 class='widget-title'>为我+1</h3>
+		<div id='plusone'><g:plusone href="http://www.pynotes.info" size="medium"></g:plusone></div>
+		<div>喜欢本站？点此为我+1吧！</div>
+	</li>
+	<br/>
+	<li>
+		<h3 class='widget-title'>订阅</h3>
+		<ul>
+				<!-- Feedsky FEED 订阅统计发布代码开始 -->
+		<a href="http://feed.feedsky.com/pynotes" title="PYnotes" target="_blank"><img src="http://www.feedsky.com/feed/pynotes/sc/orange_e.gif" style="border:0;margin:4px 0 0 0;" alt="" /></a>
+		<!-- Feedsky FEED 订阅统计发布代码结束 -->
+				<!-- Feedsky FEED发布代码开始 -->
+<!-- FEED自动发现标记开始 -->
+<link title="RSS 2.0" type="application/rss+xml" href="http://feed.feedsky.com/pynotes" rel="alternate" />
+<!-- FEED自动发现标记结束 -->
+<a href="http://www.zhuaxia.com/add_channel.php?url=http://feed.feedsky.com/pynotes" target="_blank"><img border="0" src="http://img.feedsky.com/images/icon_subshot02_zhuaxia.gif" alt="&#25235;&#34430;" vspace="2" style="margin-bottom:3px" ></a><br />
+<a href="http://fusion.google.com/add?feedurl=http://feed.feedsky.com/pynotes" target="_blank"><img border="0" src="http://img.feedsky.com/images/icon_subshot02_google.gif" alt="google reader" vspace="2" style="margin-bottom:3px" ></a><br />
+<a href="http://www.xianguo.com/subscribe.php?url=http://feed.feedsky.com/pynotes" target="_blank"><img border="0" src="http://img.feedsky.com/images/icon_subshot02_xianguo.gif" alt="&#40092;&#26524;" vspace="2" style="margin-bottom:3px" ></a><br />
+<a href="http://9.douban.com/reader/subscribe?url=http://feed.feedsky.com/pynotes" target="_blank"><img border="0" src="http://img.feedsky.com/images/icon_subshot02_douban.gif" alt="&#20061;&#28857;" vspace="2" style="margin-bottom:3px" ></a><br />
+<!-- Feedsky FEED发布代码结束 -->
+		</ul>
+	</li>
+	<br/>
+	<li>
+		<div>
+			<h3 class='widget-title'>搜索</h3>
+			<form method='get' action='{%url post_search%}'>
+				<div>
+				<input type='text' name='q' value=''/>
+				<input type='submit' value='Search'/>
+				</div>
+			</form>
+		</div>
+	</li>
+	<br/>
+	<li>
+		<h3 class='widget-title'>分类</h3>
+		{%blog_category%}
+	</li>
+	<br/>
+	<li>
+		<h3 class='widget-title'>标签</h3>
+		{%blog_tag%}
+	</li>
+	<br/>
+	<li>
+		<h3 class='widget-title'>最近文章</h3>
+		{%recent_posts%}	
+	</li>
+	<br/>
+	<li>
+		<h3 class='widget-title'>最近评论</h3>
+		{%recent_comments%}
+	</li>
+	<br/>
+	<li>
+		<h3 class='widget-title'>链接</h3>
+		{%links%}	
+	</li>
+	<br/>
+	<li>
+		<h3 class='widget-title'>管理</h3>
+		<ul>
+		<li>
+		<a href='/admin/'>Admin</a>
+		</li>
+		</ul>
+	</li>
+	<br/>
+	<li>
+		<h3 class='widget-title'>存档</h3>
+		{%blog_archive%}
+	</li>
+</ul>

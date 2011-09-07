@@ -1,0 +1,54 @@
+﻿{%extends 'base.html'%}
+{%block content%}
+{%load gravatar%}
+{%include 'blog/post.html'%}
+<div>
+	<div>
+		{%load comments%}
+		{%get_comment_list for post as comment_list%}
+		{%if comment_list%}
+			<h2><a name='comments'>共有{{comment_count}}条评论：</a></h2>
+			{%for comment in comment_list%}
+				<div id='comment-list'>
+					<div class='user-face'>
+						<img src='{%gravatar_url comment.user_email%}' alt="" width='40px' height='40px'/>	
+					</div>
+					
+					<div class='reply-doc'>
+						<div class='reply-title'>
+							<div class='reply-author'>
+								Said by <a href='{{comment.user_url}}' name='{{comment.user_name}}'>
+											{{comment.user_name}}
+										</a>
+							</div>
+							<div class='reply-date'>
+								On {{comment.submit_date|date:'Y-m-d H:i:s'}} | #{{forloop.counter}}
+							</div>	
+							<div class='clear'></div>
+						</div>
+						<div class='reply-body'>
+							{{comment.comment}}
+						</div>
+					</div>
+					<div class='clear'>
+					</div>
+					<div class='reply-line'>
+					</div>
+				</div>
+			{%endfor%}
+		{%else%}
+			<h2><a name='comments'>还没有评论哦，抢个沙发吧！</a></h2>	
+		{%endif%}
+	</div>
+	<div>
+		{%get_comment_form for post as comment_form%}
+		<form action='{%comment_form_target%}' method='post'>
+		<table>
+		{{comment_form}}
+		</table>
+		<input type='hidden' name='next' value='{%url post_by_id post.id%}'>
+		<input type='submit' name='post' value='提交'>
+		</form>
+	</div>
+</div>
+{%endblock%}

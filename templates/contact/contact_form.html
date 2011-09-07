@@ -1,0 +1,17 @@
+﻿{%extends 'base.html'%}
+{%block content%}
+<div id='contact-form'>
+	<h2>联系我</h2>
+    <p>你可以给我写邮件，或者直接在这里提交表单。我会在第一时间回复你。</p>
+	{%if form.errors%}
+		<p id='contact-error'>请检查以下错误：</p>
+	{%endif%}
+	<form action='' method='post'>
+		<table>
+		{{form.as_table}}
+		</table>
+		<input type='submit' value='好了，发送吧'>
+	</form>
+	</div>
+{%endblock%}
+

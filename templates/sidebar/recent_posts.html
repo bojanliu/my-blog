@@ -1,0 +1,5 @@
+<ul>
+{%for post in recent_posts%}
+<li><a href='{%url post_by_id post.id%}'>{{post.title}}</a></li>
+{%endfor%}
+</ul>

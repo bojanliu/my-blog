@@ -1,0 +1,10 @@
+﻿{%extends 'base.html'%}
+{%block content%}
+	{%if post_list.count%}
+		{%for post in post_list%}
+		{%include 'blog/post_excerpt.html'%}
+		{%endfor%}
+	{%else%}
+		There are no items to display...
+	{%endif%}
+{%endblock%}
