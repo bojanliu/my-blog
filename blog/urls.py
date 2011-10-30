@@ -23,11 +23,11 @@ archive_info={'month_format':'%m',
 feeds={'latest':LatestPosts,}
 
 urlpatterns = patterns('',
-    url(r'^$',cache_page(list_detail.object_list,60*1),bloghome_info),
+    url(r'^$',list_detail.object_list,bloghome_info),
     url(r'^search/$',search,name='post_search'),
-    url(r'^category/(?P<category_id>\d+)/$',cache_page(posts_by_category,60*1),name='posts_by_category'),
-    url(r'^tag/(?P<tag_id>\d+)/$',cache_page(posts_by_tag,60*1),name='posts_by_tag'),
-    url(r'^archive/(?P<year>\d{4})/(?P<month>\d{1,2})/$',cache_page(date_based.archive_month,60*1),archive_info,name='posts_by_month'),
-    url(r'^post/(?P<post_id>\d+)/$',cache_page(post_by_id,60*1),name='post_by_id'),
+    url(r'^category/(?P<category_id>\d+)/$',posts_by_category,name='posts_by_category'),
+    url(r'^tag/(?P<tag_id>\d+)/$',posts_by_tag,name='posts_by_tag'),
+    url(r'^archive/(?P<year>\d{4})/(?P<month>\d{1,2})/$',date_based.archive_month,archive_info,name='posts_by_month'),
+    url(r'^post/(?P<post_id>\d+)/$',post_by_id,name='post_by_id'),
     url(r'^feeds/(?P<url>.*)/$','django.contrib.syndication.views.feed',{'feed_dict':feeds}),
 )
