@@ -6,24 +6,17 @@ from django.shortcuts import get_object_or_404
 from myblog.blog.feeds import LatestPosts
 from django.views.decorators.cache import cache_page
 
-bloghome_info={'queryset':Post.objects.filter(published=True),
-               'template_object_name':'post',
-                'template_name':'blog/post_list.html',
-}
-
-  
 archive_info={'month_format':'%m',
               'date_field':'pub_date',
               'template_name':'blog/post_list.html',
               'template_object_name':'post',
               'queryset':Post.objects.filter(published=True),
-              
     }
 
 feeds={'latest':LatestPosts,}
 
 urlpatterns = patterns('',
-    url(r'^$',list_detail.object_list,bloghome_info),
+    url(r'^$',post_list),
     url(r'^search/$',search,name='post_search'),
     url(r'^category/(?P<category_id>\d+)/$',posts_by_category,name='posts_by_category'),
     url(r'^tag/(?P<tag_id>\d+)/$',posts_by_tag,name='posts_by_tag'),
