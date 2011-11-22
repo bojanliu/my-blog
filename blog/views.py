@@ -47,12 +47,12 @@ def post_by_id(request,post_id):
                                      )    
 
 from django.core.paginator import PageNotAnInteger, Paginator, InvalidPage, EmptyPage
-def post_list(request):
+def post_list(request,page_id='1'):#缺省视图参数
     posts=Post.objects.all()
     after_range_num=5 #当前页前显示5页
     befor_range_num=4 #当前页后显示4页
     try:  #如果请求的页码少于1或者类型错误，则跳转到第1页
-        page=int(request.GET.get('page',1))#默认显示第一页
+        page=int(page_id)
         if page<1:
             page=1
     except ValueError:

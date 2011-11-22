@@ -16,7 +16,8 @@ archive_info={'month_format':'%m',
 feeds={'latest':LatestPosts,}
 
 urlpatterns = patterns('',
-    url(r'^/?$',post_list),
+    url(r'^$',post_list),
+    url(r'^page/(?P<page_id>\d+)/$',post_list,name='post_by_page'),
     url(r'^search/$',search,name='post_search'),
     url(r'^category/(?P<category_id>\d+)/$',posts_by_category,name='posts_by_category'),
     url(r'^tag/(?P<tag_id>\d+)/$',posts_by_tag,name='posts_by_tag'),
