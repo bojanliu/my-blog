@@ -21,7 +21,7 @@ def links():
 
 @register.inclusion_tag('sidebar/recent_comments.html')
 def recent_comments():
-    return {'recent_comments':Comment.objects.order_by('-submit_date')[:10],}
+    return {'recent_comments':Comment.objects.filter(is_public=True).order_by('-submit_date')[:10],}
 
 
 @register.inclusion_tag('sidebar/recent_posts.html')
