@@ -13,6 +13,8 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+AKISMET_API_KEY = '7f553d6a2e2e'
+
 DATABASES = {
     'default': {
         'ENGINE': 'mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
