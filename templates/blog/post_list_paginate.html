@@ -1,0 +1,24 @@
+{%extends 'base.html'%}
+{%block content%}
+	{%for post in posts.object_list%}
+		{%include 'blog/post_excerpt.html'%}
+	{%endfor%}
+	<div>
+		{%if posts.has_previous%}
+			<a href='{%url post_by_page posts.previous_page_number%}'>&lt; 上一页</a>
+		{%endif%}
+		<span>
+			{%for p in page_range%}
+				{%ifequal p posts.number%}
+					<span class='current'>{{p}}</span>
+				{%else%}
+					<a href='{%url post_by_page p%}' title='第{{p}}页'>{{p}}</a>
+				{%endifequal%}
+			{%endfor%}
+		</span>	
+		{%if posts.has_next%}
+			<a href='{%url post_by_page posts.next_page_number%}'>下一页 &gt;</a>
+		{%endif%}
+		<a>[第{{posts.number}}/{{posts.paginator.num_pages}}页]</a>
+	</div>
+{%endblock%}

@@ -66,4 +66,4 @@ def post_list(request,page_id='1'):#缺省视图参数
         page_range=paginator.page_range[page-after_range_num:page+befor_page_num]
     else:
         page_range=paginator.page_range[0:int(page)+befor_range_num]
-    return render_to_response('blog/post_list.html',{'posts':post_list,'page_range':page_range},)
+    return render_to_response('blog/post_list_paginate.html',{'posts':post_list,'page_range':page_range},)
