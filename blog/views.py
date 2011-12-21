@@ -8,12 +8,16 @@ from django.db.models import Q
 def search(request):
     if 'q' in request.GET and request.GET['q']:
         q=request.GET['q']
-        return list_detail.object_list(
-            request,
-            template_name='blog/post_list.html',
-            template_object_name='post',
-            queryset=Post.objects.filter(Q(title__icontains=q)|Q(body__icontains=q)),
-            )
+        queryset=Post.objects.filter(Q(title__icontains=q)|Q(body__icontains=q))
+        if queryset:
+            return list_detail.object_list(
+                request,
+                template_name='blog/post_list.html',
+                template_object_name='post',
+                queryset=queryset,
+                )
+        else:
+            return render_to_response('search/non_match.html')
     else:
         return render_to_response('search/invalid_search.html')
 
