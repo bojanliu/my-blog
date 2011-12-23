@@ -1,6 +1,30 @@
-{%extends 'base.html'%}
+﻿{%extends 'base.html'%}
 {%block content%}
-    {% for post in post_list %}
-        {% include 'blog/post_excerpt.html' %}
-    {% endfor %}
-{% endblock %}
+	{%if post_list.count%}
+		{%for post in post_list%}
+			{%include 'blog/post_excerpt.html'%}
+		{%endfor%}
+	{%else%}
+		<p>抱歉！暂时还没有文章。</p>
+	{%endif%}
+	<div>
+		{%if is_paginated%}
+			{%if has_previous%}
+				<a href='./?page={{previous}}'>&lt; 上一页</a>
+			{%endif%}
+			<span>
+				{%for p in page_range%}
+					{%ifequal p page%}
+						<span class='current'>{{p}}</span>
+					{%else%}
+						<a href='./?page={{p}}' title='第{{p}}页'>{{p}}</a>
+					{%endifequal%}
+				{%endfor%}
+			</span>
+			{%if has_next%}
+				<a href='./?page={{next}}'>下一页 &gt;</a>
+			{%endif%}
+			<a>[第{{page}}/{{pages}}页]</a>
+		{%endif%}
+	</div>
+{%endblock%}
