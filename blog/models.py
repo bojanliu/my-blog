@@ -2,6 +2,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from datetime import datetime
+from myblog.tinymce import models as tinymce_models
 
 # Create your models here.
 
@@ -24,8 +25,8 @@ class Tag(models.Model):
 class Post(models.Model):
     author=models.ForeignKey(User,related_name='posts')
     title=models.CharField(max_length=100)
-    body=models.TextField()
-    excerpt=models.TextField()
+    body=tinymce_models.HTMLField()
+    excerpt=tinymce_models.HTMLField()
     published=models.BooleanField(default=False)
     pub_date=models.DateTimeField('Date Published',auto_now_add=True)
     up_date=models.DateTimeField('Date Updated',auto_now=True)

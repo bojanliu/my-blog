@@ -21,4 +21,5 @@ urlpatterns = patterns('',
     (r'^contact/thanks/$',direct_to_template,{'template':'contact/thanks.html'}),
     (r'^comments/',include('django.contrib.comments.urls')),
     (r'',include('myblog.blog.urls')),
+    url(r'^tinymce/',include('tinymce.urls')),
 )

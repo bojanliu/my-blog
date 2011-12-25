@@ -104,7 +104,21 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'myblog.blog',
     'django.contrib.comments',
+    'tinymce',
 )
+
+TINYMCE_JS_URL='/static/tiny_mce/tiny_mce_src.js'
+TINYMCE_JS_ROOT='/static/tiny_mce'
+
+TINYMCE_DEFAULT_CONFIG = {
+'theme': "advanced",
+ 
+'theme_advanced_toolbar_location' : "top",
+'theme_advanced_toolbar_align' : "left",
+ 
+'width': 600,
+'height': 400,
+}
 
 EMAIL_HOST='smtp.gmail.com'
 EMAIL_HOST_PASSWORD='**********'
