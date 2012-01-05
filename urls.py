@@ -14,6 +14,7 @@ urlpatterns = patterns('',
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
+    (r'^grappelli/',include('grappelli.urls')),
     (r'^admin/', include(admin.site.urls)),
     url(r'^static/(?P<path>.*)$','django.views.static.serve',{'document_root':settings.STATIC_PATH},name='media'),
     (r'^about/$',direct_to_template,{'template':'about.html'}),

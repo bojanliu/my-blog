@@ -61,7 +61,9 @@ MEDIA_URL = 'http://pynotes.info/static/'
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
 # Examples: "http://foo.com/media/", "/media/".
-ADMIN_MEDIA_PREFIX = 'http://pynotes.info/static/admin/'
+#ADMIN_MEDIA_PREFIX = 'http://pynotes.info/static/admin/'
+ADMIN_MEDIA_PREFIX = 'http://pynotes.info/static/grappelli/'
+
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'tmumo117rt=ya1-wydb*#@zwr*bzxlj-k)@gntpd-2e04h9@%&'
 
@@ -93,6 +95,8 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
+    'tinymce',
+    'grappelli',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -105,6 +109,19 @@ INSTALLED_APPS = (
     'myblog.blog',
     'django.contrib.comments',
 )
+
+TINYMCE_JS_URL='http://pynotes.info/static/tiny_mce/tiny_mce_src.js'
+TINYMCE_JS_ROOT='/home/pynotes/webapps/static/tiny_mce/'
+
+TINYMCE_DEFAULT_CONFIG = {
+'theme': "advanced",
+ 
+'theme_advanced_toolbar_location' : "top",
+'theme_advanced_toolbar_align' : "left",
+ 
+'width': 600,
+'height': 400,
+}
 
 CACHE_BACKEND='db://my_cache_table'
 

@@ -61,7 +61,8 @@ MEDIA_URL = ''
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
 # Examples: "http://foo.com/media/", "/media/".
-ADMIN_MEDIA_PREFIX = '/media/'
+#ADMIN_MEDIA_PREFIX = '/media/'
+ADMIN_MEDIA_PREFIX = 'http://127.0.0.1:8000/static/grappelli/'
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'tmumo117rt=ya1-wydb*#@zwr*bzxlj-k)@gntpd-2e04h9@%&'
@@ -93,6 +94,8 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
+    'tinymce',
+    'grappelli',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -104,7 +107,6 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'myblog.blog',
     'django.contrib.comments',
-    'tinymce',
 )
 
 TINYMCE_JS_URL='/static/tiny_mce/tiny_mce_src.js'
