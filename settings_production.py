@@ -110,7 +110,7 @@ INSTALLED_APPS = (
     'django.contrib.comments',
 )
 
-TINYMCE_JS_URL='http://pynotes.info/static/tiny_mce/tiny_mce_src.js'
+TINYMCE_JS_URL='http://www.pynotes.info/static/tiny_mce/tiny_mce_src.js'
 TINYMCE_JS_ROOT='/home/pynotes/webapps/static/tiny_mce/'
 
 TINYMCE_DEFAULT_CONFIG = {
