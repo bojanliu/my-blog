@@ -115,6 +115,9 @@ TINYMCE_JS_ROOT='/home/pynotes/webapps/static/tiny_mce/'
 
 TINYMCE_DEFAULT_CONFIG = {
 'theme': "advanced",
+
+'plugins': "syntaxhl",
+'theme_advanced_buttons2_add': "|,syntaxhl",
  
 'theme_advanced_toolbar_location' : "top",
 'theme_advanced_toolbar_align' : "left",
