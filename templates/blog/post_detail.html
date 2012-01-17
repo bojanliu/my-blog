@@ -6,6 +6,7 @@
 	<div>
 		{%load comments%}
 		{%get_comment_list for post as comment_list%}
+		{%get_comment_count for post as comment_count%}
 		{%if comment_list%}
 			<h2><a name='comments'>共有{{comment_count}}条评论：</a></h2>
 			{%for comment in comment_list%}
