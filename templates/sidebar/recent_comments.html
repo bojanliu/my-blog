@@ -9,7 +9,7 @@
 	<span>{{comment.user_name}} in 
 	<a href='{%url post_by_id comment.object_pk%}#{{comment.user_name}}'>
 		{{comment.content_object}}
-	</a> said: {{comment.comment}}
+	</a> said: {{comment.comment|slice:":25"}}
 	</span>
 	<div class='rc-line'></div>
 </div>
