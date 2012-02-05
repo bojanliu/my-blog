@@ -2,6 +2,12 @@
 {%block content%}
 {%load gravatar%}
 {%include 'blog/post.html'%}
+<style type="text/css">
+label{display:inline;float:left;width:100px;}
+input,textarea{width:340px;}
+textarea{height:80px;}
+input[type=submit]{width:120px;margin-left:300px;}
+</style>
 <div>
 	<div>
 		{%load comments%}
@@ -42,13 +48,17 @@
 		{%endif%}
 	</div>
 	<div>
-		{%get_comment_form for post as comment_form%}
+		{%get_comment_form for post as form%}
 		<form action='{%comment_form_target%}' method='post'>
-		<table>
-		{{comment_form}}
-		</table>
-		<input type='hidden' name='next' value='{%url post_by_id post.id%}'>
-		<input type='submit' name='post' value='提交'>
+			{% csrf_token %}{{form.object_pk}}{{form.content_type}}{{form.timestamp}}{{form.security_hash}}
+			<p><label for="id_name">姓名（必填）：</label><input name="name" id="id_name"></p>
+			<p><label for="id_email">邮箱（必填）：</label><input name="email" id="id_email"></p>
+			<p><label for="id_url">网站（可选）：</label><input name="url" id="id_url"></p>
+			<p><label for="id_comment">评论（必填）：</label></p>
+			<p><textarea id="id_comment" rows="10" cols="40" name="comment"></textarea></p>
+			<p style="display:none;"><label for="id_honeypot">如果你在该字段中输入任何内容，那么你的评论就会被视为垃圾评论。</label> <input type="text" name="honeypot" id="id_honeypot"></p>
+			<p><input name="post" value="发表" type="submit" /></p>
+			<input type='hidden' name='next' value='{%url post_by_id post.id%}' />
 		</form>
 	</div>
 </div>
