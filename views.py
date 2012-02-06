@@ -8,6 +8,7 @@ def contact(request):
     if request.method=='POST':
         form=contactform(request.POST)
         if form.is_valid():
+            human=True
             cd=form.cleaned_data
             send_mail(
                 cd['subject'],

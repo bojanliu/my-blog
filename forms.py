@@ -1,11 +1,12 @@
 #-*-coding:utf-8-*-
 from django import forms
+from captcha.fields import CaptchaField
 
 class contactform(forms.Form):
-    subject=forms.CharField(max_length=50,label=('主题 （必填）'))
-    email=forms.EmailField(required=False,label=('邮箱 （可选，不会被公开）'))
-    message=forms.CharField(widget=forms.Textarea(),label=('内容 （必填）'))
-
+    subject=forms.CharField(max_length=50,label=('主题（必填）'))
+    email=forms.EmailField(required=False,label=('邮箱（可选，不会被公开）'))
+    message=forms.CharField(widget=forms.Textarea(),label=('内容（必填）'))
+    captcha=CaptchaField(label=('验证码（必填）'))
 
     def clean_message(self):
         message=self.cleaned_data.get('message','')
