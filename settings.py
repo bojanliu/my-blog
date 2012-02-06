@@ -95,6 +95,7 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
+    'captcha',
     'tinymce',
     'grappelli',
     'django.contrib.auth',

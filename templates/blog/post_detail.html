@@ -7,6 +7,7 @@ label{display:inline;float:left;width:100px;}
 input,textarea{width:340px;}
 textarea{height:80px;}
 input[type=submit]{width:120px;margin-left:300px;}
+#id_captcha_1{width:257px;}
 </style>
 <div>
 	<div>
@@ -56,6 +57,9 @@ input[type=submit]{width:120px;margin-left:300px;}
 			<p><label for="id_url">网站（可选）：</label><input name="url" id="id_url"></p>
 			<p><label for="id_comment">评论（必填）：</label></p>
 			<p><textarea id="id_comment" rows="10" cols="40" name="comment"></textarea></p>
+			<p><label for="id_captcha">验证（必填）：</label>
+			{{form.captcha}}
+			</p>			
 			<p style="display:none;">
 			<label for="id_honeypot">如果你在该字段中输入任何内容，那么你的评论就会被视为垃圾评论。</label>
 			<input type="text" name="honeypot" id="id_honeypot">
