@@ -56,8 +56,8 @@ div.menu,
 #wrapper{margin:0 auto;width:940px;}
 #wrapper{background:#fff;margin-top:20px;padding:0 20px;}
 
-#site-info{float:left;font-size:16px;font-weight:bold;width:600px;}
-#site-generator{float:right;width:220px;}
+#site-info{float:left;font-size:16px;font-weight:bold;width:300px;}
+#site-generator{float:left;width:640px;}
 body{background:#f1f1f1;}
 body,input,textarea{color:#666;font-size:12px;line-height:18px;}
 hr{background-color:#e7e7e7;border:0;clear:both;height:1px;margin-bottom:18px;}
@@ -360,7 +360,7 @@ img
 
 .sharing{clear:both;}}
 
-#site-generator{text-align:right;width:320px;}
+#site-generator{text-align:right;width:640px;}
 
 /*以下为我自己新建的*/
 /*评论部分*/
@@ -438,3 +438,6 @@ margin:0 0 3px;}
 .widget-title{color:#0C7823;font-size:14px;}
 #plusone{background-color:;margin-top:6px;}
 /*sidebar*/
+/*首页*/
+#site-generator span{margin-right:10px;}
+#site-generator img{border:1px dotted #369;}
