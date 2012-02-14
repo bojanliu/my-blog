@@ -390,6 +390,8 @@ img
 #find-me img{border:1px dotted #369;}
 .site-logo{float:left;margin:0 8px 0 0;}
 #about-me{border-bottom:#369 1px dashed;margin-bottom:15px;padding-bottom:20px;}
+#books{float:left;}
+#music{float:right;margin-right:40px;}
 /*about²¿·Ö*/
 
 #plusone{margin:0 0 0 2px;}

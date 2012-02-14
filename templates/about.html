@@ -2,12 +2,12 @@
 {%block content%}
 <div>
 	<div id='about-me'>
-		<h2>About me</h2>
-		<p>About me: Just a loser in Tianchao</p>
-		<p>Location: Nanjing Jiangsu China</p>
-		<div class='email'><p>Contact me: Email/Gtalk</p></div>
+		<h2>个人简介</h2>
+		<p>男，1986年出生。籍贯：江苏 南京</p>
+		<p>常用网络ID： BojanLiu</p>
+		<div class='email'><p>联系我: Email/Gtalk</p></div>
 		<div id='find-me'>
-			<p>You can find me here:</p>
+			<p>你可以在这些地方了解我:</p>
 			<div id='delicious' class='site-logo'>
 				<a href='http://www.delicious.com/bojanliu' target="_blank" title='my delicious bookmark'>
 					<img src="/static/delicious.png">
@@ -43,16 +43,27 @@
 					<img src="/static/reader.gif">
 				</a>
 			</div>
+			<div id='reader' class='site-logo'>
+				<a href='http://www.zhihu.com/people/bojanliu' target="_blank" title='my zhihu profile'>
+					<img src="/static/zhihu-logo.jpg">
+				</a>
+			</div>
+			<div id='reader' class='site-logo'>
+				<a href='https://github.com/bojanliu' target="_blank" title='my github profile'>
+					<img src="/static/github-logo.jpg">
+				</a>
+			</div>
 			<div class='clear'></div>
 		</div>
 	</div>
 	<div>
-		<p></p>
-		<script type="text/javascript" 
-			src="http://www.douban.com/service/badge/bojanliu/?show=collection&amp;
-			select=random&amp;n=10&amp;columns=5&amp;hidelogo=yes&amp;
-			cat=movie|book|music" >
-		</script>
+		<p>我的书影音</p>
+		<div id='books'>
+			<script type="text/javascript" src="http://www.douban.com/service/badge/bojanliu/?show=wishlist&amp;n=10&amp;columns=2&amp;hidelogo=yes" ></script>
+		</div>
+		<div id='music'>
+			<script src="http://img3.douban.com/js/packed_radiowidget_plain7418268585.js?doubanid=50662455&maxresults=9&color=3"></script>
+		</div>
 	</div>
 </div>
 {%endblock%}
