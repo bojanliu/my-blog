@@ -97,6 +97,7 @@ TEMPLATE_DIRS = (
 INSTALLED_APPS = (
     'captcha',
     'tinymce',
+    'grappelli.dashboard',
     'grappelli',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -113,19 +114,23 @@ INSTALLED_APPS = (
 
 TINYMCE_JS_URL='/static/tiny_mce/tiny_mce_src.js'
 TINYMCE_JS_ROOT='/static/tiny_mce'
-
 TINYMCE_DEFAULT_CONFIG = {
 'theme': "advanced",
-
 'plugins': "syntaxhl",
 'theme_advanced_buttons2_add': "|,syntaxhl",
- 
 'theme_advanced_toolbar_location' : "top",
 'theme_advanced_toolbar_align' : "left",
- 
 'width': 600,
 'height': 400,
 }
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.contrib.auth.context_processors.auth",
+    "django.core.context_processors.request",
+    "django.core.context_processors.i18n",
+    'django.contrib.messages.context_processors.messages',
+)
+GRAPPELLI_INDEX_DASHBOARD = 'myblog.dashboard.CustomIndexDashboard'
 
 EMAIL_HOST='smtp.gmail.com'
 EMAIL_HOST_PASSWORD='**********'
