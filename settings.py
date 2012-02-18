@@ -99,6 +99,7 @@ INSTALLED_APPS = (
     'tinymce',
     'grappelli.dashboard',
     'grappelli',
+    'filebrowser',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -131,6 +132,12 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.messages.context_processors.messages',
 )
 GRAPPELLI_INDEX_DASHBOARD = 'myblog.dashboard.CustomIndexDashboard'
+
+#设置JS的URL前缀
+FILEBROWSER_URL_FILEBROWSER_MEDIA =MEDIA_URL+ '/static/filebrowser/'
+FILEBROWSER_PATH_FILEBROWSER_MEDIA =MEDIA_ROOT +'filebrowser/' 
+#上传图片的路径
+FILEBROWSER_DIRECTORY ='static/uploads/'
 
 EMAIL_HOST='smtp.gmail.com'
 EMAIL_HOST_PASSWORD='**********'
