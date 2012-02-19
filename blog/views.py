@@ -42,12 +42,11 @@ def posts_by_tag(request,tag_id):
                                    )
 
 def posts_by_page(request):
-    queryset=Post.objects.all()
     return list_detail.object_list(
                      request,
                      template_object_name='post',
                      template_name='blog/post_list.html',
-                     queryset=queryset,
+                     queryset=Post.objects.filter(published=True),
                      paginate_by=5,
                      )
 
