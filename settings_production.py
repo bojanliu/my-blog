@@ -51,18 +51,18 @@ USE_L10N = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = '/home/pynotes/webapps/static/'
+MEDIA_ROOT = '/home/username/webapps/static/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = 'http://pynotes.info/static/'
+MEDIA_URL = 'http://domain/static/'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
 # Examples: "http://foo.com/media/", "/media/".
 #ADMIN_MEDIA_PREFIX = 'http://pynotes.info/static/admin/'
-ADMIN_MEDIA_PREFIX = 'http://pynotes.info/static/grappelli/'
+ADMIN_MEDIA_PREFIX = 'http://domain/static/grappelli/'
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'tmumo117rt=ya1-wydb*#@zwr*bzxlj-k)@gntpd-2e04h9@%&'
@@ -92,12 +92,14 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
     rel('templates'),
     #os.path.join(os.path.dirname(__file__),'templates').replace('\\','/'),
-    #'C:/djcode/myblog/templates',
 )
 
 INSTALLED_APPS = (
+    'captcha',
     'tinymce',
+    'grappelli.dashboard',
     'grappelli',
+    'filebrowser',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -111,28 +113,36 @@ INSTALLED_APPS = (
     'django.contrib.comments',
 )
 
-TINYMCE_JS_URL='http://www.pynotes.info/static/tiny_mce/tiny_mce_src.js'
-TINYMCE_JS_ROOT='/home/pynotes/webapps/static/tiny_mce/'
-
+TINYMCE_JS_URL=MEDIA_URL+'tiny_mce/tiny_mce_src.js'
+TINYMCE_JS_ROOT=MEDIA_ROOT+'tiny_mce/'
 TINYMCE_DEFAULT_CONFIG = {
 'theme': "advanced",
-
 'plugins': "syntaxhl",
 'theme_advanced_buttons2_add': "|,syntaxhl",
- 
 'theme_advanced_toolbar_location' : "top",
 'theme_advanced_toolbar_align' : "left",
- 
 'width': 600,
 'height': 400,
 }
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+   "django.contrib.auth.context_processors.auth",
+   "django.core.context_processors.request",
+   "django.core.context_processors.i18n",
+   'django.contrib.messages.context_processors.messages',
+)
+GRAPPELLI_INDEX_DASHBOARD = 'myblog.dashboard.CustomIndexDashboard'
+
+FILEBROWSER_URL_FILEBROWSER_MEDIA =MEDIA_URL+'filebrowser/'
+FILEBROWSER_PATH_FILEBROWSER_MEDIA =MEDIA_ROOT +'filebrowser/'
+FILEBROWSER_DIRECTORY =MEDIA_ROOT +'uploads/'
 
 CACHE_BACKEND='db://my_cache_table'
 
 EMAIL_HOST='smtp.webfaction.com'
 EMAIL_HOST_PASSWORD='******'
 EMAIL_HOST_USER='******'
-DEFAULT_FROM_EMAIL ='me@pynotes.info'
-SERVER_EMAIL ='me@pynotes.info'
+DEFAULT_FROM_EMAIL ='**@domain'
+SERVER_EMAIL ='**@domain'
 EMAIL_PORT=587
 EMAIL_USE_TLS=True
