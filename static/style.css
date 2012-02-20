@@ -82,7 +82,7 @@ abbr,acronym{border-bottom:1px dotted #666;cursor:help;}
 sup,sub{height:0;line-height:1;position:relative;vertical-align:baseline;}
 sup{bottom:1ex;}
 sub{top:.5ex;}
-input[type="text"],textarea{background:#f9f9f9;border:1px solid #333;box-shadow:inset 1px 1px 1px rgba(0,0,0,0.1);-moz-box-shadow:inset 1px 1px 1px rgba(0,0,0,0.1);-webkit-box-shadow:inset 1px 1px 1px rgba(0,0,0,0.1);padding:2px;}
+input[type="text"],textarea{border:1px solid #333;box-shadow:inset 1px 1px 1px rgba(0,0,0,0.1);-moz-box-shadow:inset 1px 1px 1px rgba(0,0,0,0.1);-webkit-box-shadow:inset 1px 1px 1px rgba(0,0,0,0.1);padding:2px;}
 a:link{color:#0066cc;}
 a:visited{color:#743399;}
 a:active,a:hover{color:#ff4b33;}
@@ -362,8 +362,8 @@ img
 
 #site-generator{text-align:right;width:640px;}
 
-/*ÒÔÏÂÎªÎÒ×Ô¼ºÐÂ½¨µÄ*/
-/*ÆÀÂÛ²¿·Ö*/
+/*ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½Ô¼ï¿½ï¿½Â½ï¿½ï¿½ï¿½*/
+/*ï¿½ï¿½ï¿½Û²ï¿½ï¿½ï¿½*/
 #comment-list{margin:0 0 10px 0;}
 .user-face{float:left;}
 .reply-doc{float:left;margin:0 0 4px 20px;width:560px;}
@@ -375,31 +375,31 @@ img
 .reply-date{float:right;}
 .clear{clear:both;}
 .reply-line{border-bottom:1px dotted #ccc;margin:0 0 30px 0;}
-/*ÆÀÂÛ²¿·Ö*/
-/*ÆÀÂÛ±íµ¥²¿·Ö*/
+/*ï¿½ï¿½ï¿½Û²ï¿½ï¿½ï¿½*/
+/*ï¿½ï¿½ï¿½Û±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 #id_name,#id_email,#id_url{width:300px;height:24px;border:1px solid #333;}
 #id_comment{width:300px;height:80px;}
 #captcha_img img{border:1px solid #333;vertical-align:middle;height:28px;width:80px;}
 #id_captcha_1{width:103px;height:24px;}
 #comment_submit{width:103px;height:30px;}
-/*ÆÀÂÛ±íµ¥²¿·Ö*/
-/*recent-comment²¿·Ö*/
+/*ï¿½ï¿½ï¿½Û±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
+/*recent-commentï¿½ï¿½ï¿½ï¿½*/
 .recent-comments li{list-style:none;}
 .recent-comments img{width:20px;height:20px;}
 .rc-img{float:left;margin:4px 4px 0 0;}
 .rc-line{border-bottom:1px dotted #ccc;margin:0 0 4px 0;}
-/*recent-comment²¿·Ö*/
+/*recent-commentï¿½ï¿½ï¿½ï¿½*/
 #content,
 #content input,
 #content textarea{color:#333;font-size:12px;line-height:24px;}
-/*about²¿·Ö*/
+/*aboutï¿½ï¿½ï¿½ï¿½*/
 .email{background:url(mail.png) right no-repeat;white-space:pre;width:300px;}
 #find-me img{border:1px dotted #369;}
 .site-logo{float:left;margin:0 8px 0 0;}
 #about-me{border-bottom:#369 1px dashed;margin-bottom:15px;padding-bottom:20px;}
 #books{float:left;}
 #music{float:right;margin-right:40px;}
-/*about²¿·Ö*/
+/*aboutï¿½ï¿½ï¿½ï¿½*/
 
 #plusone{margin:0 0 0 2px;}
 /*contact*/
@@ -447,6 +447,6 @@ margin:0 0 3px;}
 .widget-title{color:#0C7823;font-size:14px;}
 #plusone{background-color:;margin-top:6px;}
 /*sidebar*/
-/*Ê×Ò³*/
+/*ï¿½ï¿½Ò³*/
 #site-generator span{margin-right:10px;}
 #site-generator img{border:1px dotted #369;}
