@@ -82,7 +82,7 @@ abbr,acronym{border-bottom:1px dotted #666;cursor:help;}
 sup,sub{height:0;line-height:1;position:relative;vertical-align:baseline;}
 sup{bottom:1ex;}
 sub{top:.5ex;}
-input[type="text"],textarea{background:#f9f9f9;border:1px solid #369;box-shadow:inset 1px 1px 1px rgba(0,0,0,0.1);-moz-box-shadow:inset 1px 1px 1px rgba(0,0,0,0.1);-webkit-box-shadow:inset 1px 1px 1px rgba(0,0,0,0.1);padding:2px;}
+input[type="text"],textarea{background:#f9f9f9;border:1px solid #333;box-shadow:inset 1px 1px 1px rgba(0,0,0,0.1);-moz-box-shadow:inset 1px 1px 1px rgba(0,0,0,0.1);-webkit-box-shadow:inset 1px 1px 1px rgba(0,0,0,0.1);padding:2px;}
 a:link{color:#0066cc;}
 a:visited{color:#743399;}
 a:active,a:hover{color:#ff4b33;}
@@ -138,7 +138,7 @@ a:active,a:hover{color:#ff4b33;}
 #content h4,
 #content h5,
 #content h6{color:#000;line-height:1.5em;margin:0 0 20px 0;}
-#content table{border:1px solid #369;margin:0 -1px 24px 0;text-align:left;width:100%;}
+#content table{border:1px solid #333;margin:0 -1px 24px 0;text-align:left;width:100%;}
 #content tr th,
 #content thead th{color:#000;font-size:12px;font-weight:200;line-height:18px;padding:9px 24px;}
 #content tr td{border-top:0px solid #e7e7e7;padding:6px 24px;}
@@ -376,6 +376,13 @@ img
 .clear{clear:both;}
 .reply-line{border-bottom:1px dotted #ccc;margin:0 0 30px 0;}
 /*评论部分*/
+/*评论表单部分*/
+#id_name,#id_email,#id_url{width:300px;height:24px;border:1px solid #333;}
+#id_comment{width:300px;height:80px;}
+#captcha_img img{border:1px solid #333;vertical-align:middle;height:28px;width:80px;}
+#id_captcha_1{width:103px;height:24px;}
+#comment_submit{width:103px;height:30px;}
+/*评论表单部分*/
 /*recent-comment部分*/
 .recent-comments li{list-style:none;}
 .recent-comments img{width:20px;height:20px;}
