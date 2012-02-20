@@ -7,10 +7,10 @@
 	{%else%}
 		<p>抱歉！暂时还没有文章。</p>
 	{%endif%}
-	<div>
+	<div id='paginator'>
 		{%if is_paginated%}
 			{%if has_previous%}
-				<a href='./?page={{previous}}'>&lt; 上一页</a>
+				<a href='./?page={{previous}}'>上一页</a>
 			{%endif%}
 			<span>
 				{%for p in page_range%}
@@ -22,9 +22,9 @@
 				{%endfor%}
 			</span>
 			{%if has_next%}
-				<a href='./?page={{next}}'>下一页 &gt;</a>
+				<a href='./?page={{next}}'>下一页</a>
 			{%endif%}
-			<a>[第{{page}}/{{pages}}页]</a>
+			第{{page}}/{{pages}}页
 		{%endif%}
 	</div>
 {%endblock%}

@@ -1,4 +1,4 @@
-html, body, div, span, applet, object, iframe,
+﻿html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, img, ins, kbd, q, s, samp,
@@ -450,3 +450,7 @@ margin:0 0 3px;}
 /*��ҳ*/
 #site-generator span{margin-right:10px;}
 #site-generator img{border:1px dotted #369;}
+/*paginator*/
+#paginator a{margin:0 5px 0 5px;text-decoration:none;border:#333 1px solid;}
+#paginator{text-align:center;font-size:14px;}
+/*paginator*/
