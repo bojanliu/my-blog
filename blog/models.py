@@ -40,7 +40,11 @@ class Post(models.Model):
         ordering=['-pub_date']
 
     def is_bigest_id(self):
-        if self.id >= Post.objects.order_by('-id')[0].id:
+        if self.id >= Post.objects.filter(published=True).order_by('-id')[0].id:
+            return True
+        
+    def is_smallest_id(self):
+        if self.id <= Post.objects.filter(published=True).order_by('id')[0].id:
             return True
 
     def befor_post_title(self):
@@ -49,9 +53,32 @@ class Post(models.Model):
     def after_post_title(self):
         return Post.objects.get(id=self.id-1).title
 
+class Message(models.Model):
+    people=models.CharField(max_length=15)
+    email=models.EmailField()
+    message=models.TextField(max_length=200)
+    submit_date=models.DateTimeField(auto_now_add=True)
+    ip_address=models.IPAddressField(null=True)
+    is_public=models.BooleanField(default=True)
+    is_removed=models.BooleanField(default=False)
+
+    def __unicode__(self):
+        return u"%s说：%s"%(self.people, self.message[:50])
+
+    class Meta:
+        ordering=['-submit_date']
+
+    def save(self, *args, **kwargs):
+        super(Message, self).save(*args, **kwargs)
+
+
+
+
+
+
+
 
 from django.contrib.comments.signals import comment_was_posted
-
 def on_comment_was_posted(sender, comment, request, *args, **kwargs):
     # spam checking can be enabled/disabled per the comment's target Model
     #if comment.content_type.model_class() != Entry:

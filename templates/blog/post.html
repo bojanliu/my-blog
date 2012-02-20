@@ -25,11 +25,11 @@
 			{%endif%}
 		</div>
 		<div id='after-post'>
-			{%ifequal post.id 1%}
+			{%if post.is_smallest_id%}
 			最后一篇
 			{%else%}
 			<a href='{%url post_by_id post.id|add:'-1'%}'>下一篇：{{post.after_post_title}}</a>
-			{%endifequal%}
+			{%endif%}
 		</div>
 		<div class='clear'></div>
 	</div>
