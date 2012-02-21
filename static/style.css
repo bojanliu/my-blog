@@ -1,4 +1,4 @@
-ï»¿html, body, div, span, applet, object, iframe,
+html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, img, ins, kbd, q, s, samp,
@@ -362,8 +362,8 @@ img
 
 #site-generator{text-align:right;width:640px;}
 
-/*ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½Ô¼ï¿½ï¿½Â½ï¿½ï¿½ï¿½*/
-/*ï¿½ï¿½ï¿½Û²ï¿½ï¿½ï¿½*/
+/*ÒÔÏÂÎªÎÒ×Ô¼ºÐÂ½¨µÄ*/
+/*ÆÀÂÛ²¿·Ö*/
 #comment-list{margin:0 0 10px 0;}
 .user-face{float:left;}
 .reply-doc{float:left;margin:0 0 4px 20px;width:560px;}
@@ -375,31 +375,31 @@ img
 .reply-date{float:right;}
 .clear{clear:both;}
 .reply-line{border-bottom:1px dotted #ccc;margin:0 0 30px 0;}
-/*ï¿½ï¿½ï¿½Û²ï¿½ï¿½ï¿½*/
-/*ï¿½ï¿½ï¿½Û±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
+/*ÆÀÂÛ²¿·Ö*/
+/*ÆÀÂÛ±íµ¥²¿·Ö*/
 #id_name,#id_email,#id_url{width:300px;height:24px;border:1px solid #333;}
 #id_comment{width:300px;height:80px;}
 #captcha_img img{border:1px solid #333;vertical-align:middle;height:28px;width:80px;}
 #id_captcha_1{width:103px;height:24px;}
 #comment_submit{width:103px;height:30px;}
-/*ï¿½ï¿½ï¿½Û±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
-/*recent-commentï¿½ï¿½ï¿½ï¿½*/
+/*ÆÀÂÛ±íµ¥²¿·Ö*/
+/*recent-comment²¿·Ö*/
 .recent-comments li{list-style:none;}
 .recent-comments img{width:20px;height:20px;}
 .rc-img{float:left;margin:4px 4px 0 0;}
 .rc-line{border-bottom:1px dotted #ccc;margin:0 0 4px 0;}
-/*recent-commentï¿½ï¿½ï¿½ï¿½*/
+/*recent-comment²¿·Ö*/
 #content,
 #content input,
 #content textarea{color:#333;font-size:12px;line-height:24px;}
-/*aboutï¿½ï¿½ï¿½ï¿½*/
+/*about²¿·Ö*/
 .email{background:url(mail.png) right no-repeat;white-space:pre;width:300px;}
 #find-me img{border:1px dotted #369;}
 .site-logo{float:left;margin:0 8px 0 0;}
 #about-me{border-bottom:#369 1px dashed;margin-bottom:15px;padding-bottom:20px;}
 #books{float:left;}
 #music{float:right;margin-right:40px;}
-/*aboutï¿½ï¿½ï¿½ï¿½*/
+/*about²¿·Ö*/
 
 #plusone{margin:0 0 0 2px;}
 /*contact*/
@@ -409,13 +409,14 @@ img
 #contact-form ul.errorlist{margin:0px;padding:0px;}
 #contact-form ul.errorlist li{color:#f30;display:block;font-size:12px;
 margin:0 0 3px;}
-#contact-form input[type='text']{width:180px;height:25px;background-color:white;}
+#contact-form input[type='text']{width:170px;height:25px;background-color:white;}
 #contact-form textarea{height:200px;width:250px;background-color:white;}
 #contact-form{font-size:10px;border-color:#06c;}
 #contact-form input[type='submit']{width:85px;height:23px;font-size:12px;}
 #contact-form tr th{padding-right:0px;}
 #contact-form tr td{padding:6px 0;}
 #contact-form table{width:520px;}
+#contact-form img{border:1px solid #333;vertical-align:middle;height:28px;width:80px;}
 /*contact*/
 /*search-error*/
 #search-error h3{color:#0C7823;}
@@ -447,10 +448,10 @@ margin:0 0 3px;}
 .widget-title{color:#0C7823;font-size:14px;}
 #plusone{background-color:;margin-top:6px;}
 /*sidebar*/
-/*ï¿½ï¿½Ò³*/
+/*Ê×Ò³*/
 #site-generator span{margin-right:10px;}
 #site-generator img{border:1px dotted #369;}
-/*paginator*/
+/*·ÖÒ³Âë²¿·Ö*/
 #paginator a{margin:0 5px 0 5px;text-decoration:none;border:#333 1px solid;}
 #paginator{text-align:center;font-size:14px;}
-/*paginator*/
+/*·ÖÒ³Âë²¿·Ö*/
