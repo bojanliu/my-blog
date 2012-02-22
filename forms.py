@@ -4,7 +4,7 @@ from captcha.fields import CaptchaField
 
 class contactform(forms.Form):
     subject=forms.CharField(max_length=50,label=('主题（必填）'))
-    email=forms.EmailField(required=False,label=('邮箱（可选，不会被公开）'))
+    email=forms.EmailField(label=('邮箱（必填，不公开）'))
     message=forms.CharField(widget=forms.Textarea(),label=('内容（必填）'))
     captcha=CaptchaField(label=('验证码（必填）'))
 
