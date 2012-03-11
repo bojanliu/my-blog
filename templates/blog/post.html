@@ -16,6 +16,10 @@
 		<a href='{%url posts_by_tag tag.id%}'>{{tag}}</a>
 		{%endfor%}
 	</div>
+	<div class='post_url'>
+		要转载本文，请注明原文地址： 
+		<a href='{%url post_by_id post.id%}'>http://newliu.com{%url post_by_id post.id%}</a>
+	</div>
 	<div id='bottom-info'>
 		<div id='befor-post'>
 			{%if post.is_bigest_id%}

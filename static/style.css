@@ -430,13 +430,15 @@ margin:0 0 3px;}
 .entry-meta .riqi{background:url(time.gif) left no-repeat;white-space:pre;}
 .entry-meta .zuozhe{background:url(user.gif) left no-repeat;white-space:pre;}
 .entry-meta .pinglun{background:url(comment.gif) left no-repeat;white-space:pre;}
+.entry-tags{margin-top:10px;}
 .entry-meta a,
 .entry-tags a{color:#06c;text-decoration:none;}
-.entry-tags a{margin-right:12px;}
+.entry-tags a{margin-right:15px;}
 .entry-meta a:hover,
 .entry-tags a:hover{color:#ff4b33;text-decoration:none;}
 #seeall a{text-decoration:none;}
 #seeall{float:right;}
+.post_url {color:#666;margin:10px 0 10px 0;}
 #befor-post{float:left;width:310px;}
 #after-post{float:right;width:310px;text-align:right;}
 #bottom-info{margin:10px 0 10px 0;}
