@@ -139,6 +139,8 @@ FILEBROWSER_PATH_FILEBROWSER_MEDIA =MEDIA_ROOT +'filebrowser/'
 #上传图片的路径
 FILEBROWSER_DIRECTORY ='static/uploads/'
 
+CACHE_BACKEND='db://my_cache_table'
+
 EMAIL_HOST='smtp.gmail.com'
 EMAIL_HOST_PASSWORD='**********'
 EMAIL_HOST_USER='******@gmail.com'
