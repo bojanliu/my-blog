@@ -6,7 +6,7 @@
 	</h2>
 	<div class='entry-meta'>
 		<span class='riqi'>      日期：{{post.pub_date|date:'F j, Y'}}           </span>       
-		<span class='zuozhe'>      作者：{{post.author}}           </span>        
+		<span class='zuozhe'>      作者：{{post.author|capfirst}}           </span>        
 		<span class='pinglun'>      <a href='{%url post_by_id post.id%}#comments'>评论({{comment_count}})</a>         </span>   	
 		<span class='category'>分类：{%for category in post.categories.all%}<a href='{%url posts_by_category category.id%}'>{{category}}</a>{%endfor%}</span>
 	</div>
