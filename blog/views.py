@@ -15,11 +15,12 @@ def search(request):
                 template_name='blog/post_list.html',
                 template_object_name='post',
                 queryset=queryset,
+                extra_context={'is_search_result':u'搜索结果'},
                 )
         else:
-            return render_to_response('search/non_match.html')
+            return render_to_response('search/bad_result.html',{'is_non_match':True,'is_search_result':u'搜索结果'})
     else:
-        return render_to_response('search/invalid_search.html')
+        return render_to_response('search/bad_result.html',{'is_search_result':u'搜索结果'})
 
 def posts_by_category(request,category_id):
     category=get_object_or_404(Category,id=category_id)
@@ -28,7 +29,8 @@ def posts_by_category(request,category_id):
                                    template_object_name='post',
                                    template_name='blog/post_list.html',
                                    queryset=queryset,
-                                   paginate_by=5,
+                                   paginate_by=10,
+                                   extra_context={'is_category':u'分类 '+category.name},
                                    )
 
 def posts_by_tag(request,tag_id):
@@ -38,7 +40,8 @@ def posts_by_tag(request,tag_id):
                                    template_object_name='post',
                                    template_name='blog/post_list.html',
                                    queryset=queryset,
-                                   paginate_by=5,
+                                   paginate_by=10,
+                                   extra_context={'is_tag':u'标签 '+tag.name},
                                    )
 
 def posts_by_page(request):
@@ -47,7 +50,7 @@ def posts_by_page(request):
                      template_object_name='post',
                      template_name='blog/post_list.html',
                      queryset=Post.objects.filter(published=True),
-                     paginate_by=5,
+                     paginate_by=10,
                      )
 
 def posts_by_month(request,year,month):
@@ -60,7 +63,7 @@ def posts_by_month(request,year,month):
                                     template_name='blog/post_list.html',
                                     template_object_name='post',
                                     queryset=queryset,
-                                    extra_context={'is_paginated':False}
+                                    extra_context={'is_paginated':False,'is_archive':u'存档 '+year+u'年'+month+u'月'}
                                     )
 
 def post_by_id(request,post_id):

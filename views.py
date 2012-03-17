@@ -1,3 +1,4 @@
+#coding:utf-8
 from django.shortcuts import render_to_response
 from myblog.forms import contactform
 from django.http import HttpResponseRedirect
@@ -19,7 +20,7 @@ def contact(request):
             return HttpResponseRedirect('/contact/thanks/')
     else:
         form=contactform()
-    return render_to_response('contact/contact_form.html',{'form':form})
+    return render_to_response('contact/contact_form.html',{'form':form,'is_contact':u'联系'})
         
 
     

@@ -2,7 +2,14 @@
 <html xmlns='http://www.w3.org/1999/xhtml' lang='en'>
 <head>
 <meta http-equiv='content-type' content='text/html';charset='UTF-8'>
-<title>NewLiu 每一刻的我，都是新的！</title>
+{%if not is_tag and not is_category%}
+	{%ifequal 1 page%}
+		<title>首页 | NewLiu.com | 每一刻的我，都是新的！</title>
+	{%else%}{%if page%}
+		<title>NewLiu.com | 每一刻的我，都是新的！</title>
+	{%endif%}{%endifequal%}
+{%endif%}
+<title>{%firstof is_about is_contact post.title is_archive is_tag is_category is_search_result%} | NewLiu.com</title>
 <link href="/static/style.css" rel="stylesheet" type="text/css" media="screen"/>
 <link href="/static/syntaxhighlighter/styles/shCore.css" type="text/css" rel="stylesheet"/>
 <link href="/static/syntaxhighlighter/styles/shThemeDefault.css" type="text/css" rel="stylesheet"/>

@@ -1,7 +1,12 @@
 ﻿{%extends 'base.html'%}
 {%block content%}
 <div id='search-error'>
+{%if is_non_match%}
+<h3>未搜索到任何内容</h3>
+<p>抱歉，没有匹配的内容，您可以换个关键词试试</p>
+{%else%}
 <h3>无效的搜索</h3>
 <p>请至少输入一个搜索关键字！</p>
+{%endif%}
 </div>
 {%endblock%}
